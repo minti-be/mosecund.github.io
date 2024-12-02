@@ -1,28 +1,89 @@
+/* Global Styles */
 body {
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
+    background-color: #ffffff; /* White background */
+    color: #002c22; /* Dark green text */
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
-    color: #333;
+    align-items: center;
+    min-height: 100vh;
 }
 
+/* Container Styling */
 .container {
     text-align: center;
     padding: 20px;
-    border: 2px solid #226D68;
+    border: 1px solid #d1d1d1;
     border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9; /* Light grey background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 90%; /* Responsive width for smaller screens */
+    box-sizing: border-box;
 }
 
+/* Logo Styling */
+.logo {
+    max-width: 150px; /* Ensure the logo resizes for smaller screens */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Heading and Text Styling */
 h1 {
-    font-size: 2.5em;
-    color: #18534F;
+    font-size: 2em;
+    margin: 10px 0;
 }
 
 p {
-    font-size: 1.2em;
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+/* Link Styling */
+a {
+    color: #0078D7; /* Accent color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em; /* Adjust heading size for smaller screens */
+    }
+
+    p {
+        font-size: 0.9em; /* Adjust text size for smaller screens */
+    }
+
+    .logo {
+        max-width: 120px; /* Smaller logo size on mobile */
+    }
+
+    .container {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 0.8em;
+    }
+
+    .logo {
+        max-width: 100px;
+    }
+
+    .container {
+        padding: 10px;
+    }
 }
