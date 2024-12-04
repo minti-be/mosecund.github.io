@@ -5,15 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>En Construction</title>
-  <link rel="stylesheet" href="styles.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
   <link rel="icon" type="image/png" href="icon_dark_green.png">
+
 </head>
-<body>
-<div class="container">
-  <img src="full_dark_green.png" alt="Logo Minti" class="logo">
-  <h1>Site en Construction</h1>
-  <p>Nous travaillons actuellement sur ce site. Revenez bientôt !</p>
-  <p><a href="mailto:contact@minti.be">contact@minti.be</a></p>
+<body class="bg-ECF8F6 flex items-center justify-center min-h-screen">
+<div class="container mx-auto px-6 max-w-screen-sm text-center bg-white bg-opacity-90 shadow-lg rounded-lg p-8 border border-226D68">
+  <!-- Logo -->
+  <img src="full_dark_green.png" alt="Logo Minti" class="mx-auto w-20 mb-4 animated-image">
+  <p class="text-18534F font-medium">
+    <a href="mailto:contact@minti.be" class="hover:underline">contact@minti.be</a>
+  </p>
+
+  <!-- Titre -->
+  <h1 class="text-2xl md:text-3xl font-bold text-226D68 mt-4 mb-6">
+    <br>Inscrivez-vous pour suivre l'avancement
+  </h1>
+
+  <!-- Description -->
+  <p class="text-18534F text-lg leading-relaxed mb-6">
+    💡 <strong>Ne manquez rien !</strong><br>
+    📦 <strong>Gérez votre stock intelligemment</strong><br>
+    ⭐ <strong>Rejoignez notre communauté dès maintenant !</strong>
+  </p>
+
+  <!-- Bouton -->
+  <a href="#inscription" class="bg-18534F text-white font-semibold py-3 px-6 rounded-md hover:bg-226D68 transition duration-300">
+    Être informé !
+  </a>
+
+  <!-- Typeform Embed -->
+  <div class="mt-8">
+    <div data-tf-live="01JE7TXZFFPWCRSZ1BV4SGV3Y6"></div><script src="//embed.typeform.com/next/embed.js"></script>
+  </div>
 </div>
 </body>
 </html>
