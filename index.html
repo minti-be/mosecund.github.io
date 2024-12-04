@@ -18,13 +18,14 @@
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <link rel="icon" type="image/png" href="icon_dark_green.png">
+  <!-- Default Favicon (Green for Light Mode) -->
+  <link rel="icon" type="image/png" href="icon_dark_green.png" id="favicon">
 
 </head>
 <body class="bg-ECF8F6 flex items-center justify-center min-h-screen">
 <div class="container mx-auto px-6 max-w-screen-sm text-center bg-white bg-opacity-90 shadow-lg rounded-lg p-8 border border-226D68">
   <!-- Logo -->
-  <img src="full_dark_green.png" alt="Logo Minti" class="mx-auto w-20 mb-4 animated-image">
+  <img src="full_dark_green.png" alt="Logo Minti" class="mx-auto w-20 mb-4 animated-image" id="logo">
   <p class="text-18534F font-medium">
     <a href="mailto:contact@minti.be" class="hover:underline">contact@minti.be</a>
   </p>
@@ -41,16 +42,28 @@
     ⭐ <strong>Rejoignez notre communauté dès maintenant !</strong>
   </p>
 
-  <!-- Bouton -->
-  <a href="#inscription" class="bg-18534F text-white font-semibold py-3 px-6 rounded-md hover:bg-226D68 transition duration-300">
-    Être informé !
-  </a>
-
   <!-- Typeform Embed -->
   <div class="mt-8">
     <div data-tf-live="01JE7TXZFFPWCRSZ1BV4SGV3Y6"></div><script src="//embed.typeform.com/next/embed.js"></script>
   </div>
 
 </div>
+
+<script>
+  // Check for dark mode
+  const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  // Update favicon and logo based on dark mode preference
+  if (prefersDarkMode) {
+    // Set white logo and favicon for dark mode
+    document.getElementById('favicon').setAttribute('href', 'icon_white.png'); // Update with your white icon
+    // document.getElementById('logo').setAttribute('src', 'full_white.png'); // Update with your white logo
+  } else {
+    // Set green logo and favicon for light mode
+    document.getElementById('favicon').setAttribute('href', 'icon_dark_green.png'); // Green icon
+    // document.getElementById('logo').setAttribute('src', 'full_dark_green.png'); // Green logo
+  }
+</script>
+
 </body>
 </html>
